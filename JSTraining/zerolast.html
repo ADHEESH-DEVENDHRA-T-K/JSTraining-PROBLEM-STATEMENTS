@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        let arr=[]
+        let temp=[]
+        let n=prompt("Enter array size :")
+        for(let i=0;i<n;i++){
+            arr.push(prompt(`Enter value ${i+1} :`))
+        }
+        let count=0
+        for(let i=0;i<n;i++){
+            if(arr[i]!=0){
+                temp.push(parseInt(arr[i]))
+            }
+            else{
+                count++
+            }
+        }
+        for(let i=0;i<count;i++){
+            temp.push(0)
+        }
+        for(let i=0;i<n;i++){
+            arr[i]=temp[i]
+        }
+        console.log(arr)
+    </script>
+</body>
+</html>

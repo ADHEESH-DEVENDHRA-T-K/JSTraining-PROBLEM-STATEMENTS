@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        let sum=0
+        let ch=prompt("1.Pizza : 200/-\n2.Burger : 300/-\n3.Chicken Biriyani : 250/-\n4.Apple Juice : 60/-\nDo you want to order :")
+        while(ch==="y"){
+            let food=prompt("Enter your choice : ")
+            let quantity=prompt("Enter Quantity:")
+            switch(food){
+                case "1":
+                    sum+=parseInt(quantity)*200
+                    break
+                case "2":
+                    sum+=parseInt(quantity)*300
+                    break
+                case "3":
+                    sum+=parseInt(quantity)*250
+                    break
+                case "4":
+                    sum+=parseInt(quantity)*60
+                    break
+                default:
+                    console.log("INVALID CHOICE!..TRY AGAIN!..")
+            }
+            ch=prompt("Want to order more?..");
+            if(ch=="N"){
+                break;
+            }
+        }
+        if(sum>500){
+            sum=sum-sum*0.10
+        }
+        console.log("TOTAL AMOUNT:",sum)
+    </script>
+</body>
+</html>
